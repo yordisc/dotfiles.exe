@@ -3,113 +3,165 @@
 [//]: <> (site para ícones: https://shields.io/ )
  
 <img alt="Maintained" src="https://img.shields.io/badge/Maintained%3F-Yes-green">
-<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/yordisc/dotfiles">
-<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/yordisc/dotfiles">
-<img alt="GitHub commit activity (branch)" src="https://img.shields.io/github/commit-activity/y/yordisc/dotfiles">
-
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/yordisc/dotfiles.exe">
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/yordisc/dotfiles.exe">
+<img alt="GitHub commit activity (branch)" src="https://img.shields.io/github/commit-activity/y/yordisc/dotfiles.exe">
+ 
 <hr>
-
-#  :floppy_disk: Dotfiles :place_of_worship:
-This Dotfiles is made particularly to help me install things that I think can be done faster, I also hope it will be useful for whoever needs it.
-
-My favorite distro is *Debian* so it's mostly meant to work well on Debian, it also has functionality on *Fedora* (since I use it too) and *Archlinux* (because I might use it again in the future) ).
-
+ 
+#  :floppy_disk: Dotfiles.exe (Windows OS) :place_of_worship:
+En este repositorio se encuentra mi configuración personal de Windows a la hora de instalarlo en un ordenador y algunos consejos, al que le pueda servir que sea bienvenido.
+ 
+ ![dotfiles01](https://raw.githubusercontent.com/yordisc/dotfiles/master/dotfilesimages/dotfiles.sh01.png)
+ 
+## Instalación del sistema
+Recomiendo la instalación de un ISO windows completa (x64 ya que x86 no cumple con lo que se demanda en la actualidad y solo seria viable en un ordenador de muy bajos requerimientos y aun asi seria preferible un sistema basado en linux) y el uso de LTS solo en momentos muy particulares en donde se requiera de windows y se sepa exactamente lo que se va a hacer, aunque el redimiento de un Windows completo sea la mitad de bueno que el de un LTS, este al no contar con el sistema completo puede dar fallas.
+* [Descargar Windows](https://www.microsoft.com/es-es/software-download/windows10ISO)
+* [LTS Recomendado](https://phoenixliteos.com/ULTRALITE) Si es que se es requrido.
+* [Herramientas para hacer Windows Desatendido (LTS)](https://mega.nz/folder/uVBGRRxA#DYbopT3ICyUjswSXt1jA_A)
+* [Archivos de Importancia](https://mega.nz/folder/uMY20YQT#NXuvM7yBzPGCmHe9IbR4-w)
+### :dvd: Instaladores de ISO al USB
+* [Rufus](https://rufus.ie/es/)
+* [BalenaEtcher](https://www.balena.io/etcher/)
+* [WoeUSB](https://github.com/WoeUSB/WoeUSB-ng) Para colocar el ISO en un USB en un Sistema Linux.
+### Reparar GRUB (si se llega a dar el caso)
+* [BootRepair](https://bootrepair.es/)
+Si el problema es en Fedora usar estos comandos dentro de Fedora.
+```bash
+sudo grub2-mkconfig -o /etc/grub2.cfg
+sudo grub2-mkconfig -o /etc/grub2-efi.cfg
+```
+## PowerShell Admin (Sudo)
+```PS
+start-process powershell -verb runas
+```
 ## :zap: Dependencies :zap:
-
-```bash
-sudo apt install dialog git inxi -y
+Antes de iniciar lo primero es tener el sistema completamente actualizado para evitar posibles errores.
+Se requiere de la instalación de un PowerShell < "3.0"
+Para saber tu version puedes usar este comando.
+```PS
+$psversiontable #version de powershell
+```
+### Activación
+* [Comprar Windows](https://www.microsoft.com/es-es/windows/get-windows-10)
+Activación por script (Modo Administrador):
+```PS
+cd
+git clone https://github.com/prestonsn/windows-10-activation-script
+cd \windows-10-activation-script\script
+.\actvatr.bat
+```
+### Instalar PowerShell 7.3 desde linea de comandos (administrador)
+```cmd
+msiexec.exe /package PowerShell-7.3.0-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ADD_FILE_CONTEXT_MENU_RUNPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1 USE_MU=1 ENABLE_MU=1 ADD_PATH=1
+```
+### Scoop
+```PS
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+scoop install neofetch
+```
+### WinGet
+* [Pagina de WinGet](https://github.com/microsoft/winget-cli)
+* [WinGet desde la Microsft Store](https://apps.microsoft.com/store/detail/app-installer/9NBLGGH4NNS1?hl=es-ad&gl=ad)
+ 
+Comando de instalación desde PowerShell:
+```PS
+wget https://github.com/microsoft/winget-cli/releases/download/v1.3.2691/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle -OutFile C:\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
+Add-AppPackage -path “C:\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle”
 ```
 
-```bash
-sudo dnf install dialog git inxi -y
+### Git
+* [Pagina de Git](https://git-scm.com/download/win)
+* [GitHub Desktop](https://desktop.github.com/)
+Instalación usando Winget:
+```PS
+winget install Git.Git
 ```
-
-```bash
-sudo pacman -S dialog git inxi -y
+### Instalar Gpedit
+Siempre sera necesario tener gpedit instalado:
+```PS
+cd
+git clone https://github.com/yordisc/dotfiles.exe
+cd dotfiles.exe
+.\gpedit-install.bat
 ```
-### :pushpin: Install RPM Fusion Fedora
-```bash
-su -c 'dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm'
+### Fuentes
+Para instalar en Windows 7 y Windows 10, vaya a Panel de control > Fuentes. En Windows 8.1, vaya a Panel de control > Apariencia y personalización > Fuentes.
+* [Nerd Fonts-Hack](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/Hack.zip)
+* [Nerd Fonts-Meslo](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip)
+
+## Limpiar Sistema
+### Eliminar servicios y preinstalados (basicos)
+```PS
+cd
+git clone https://github.com/yordisc/dotfiles.exe
+cd dotfiles.exe
+.\LimpiarWindows.bat
 ```
-### :pushpin: Install Chaotic Aur (Opcional)
-```bash
-pacman-key --recv-key FBA220DFC880C036 --keyserver keyserver.ubuntu.com
-pacman-key --lsign-key FBA220DFC880C036
-pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst' 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
-sudo pacman-key --init
-sudo pacman -Syyu
-sudo echo "[chaotic-aur]
-Include = /etc/pacman.d/chaotic-mirrorlist" >> -a /etc/pacman.conf
-sudo pacman -Syyu
+### Eliminar servicios
+```PS
+cd
+git clone https://github.com/IgorGiraffa/Windows-10-tweaker
+cd Windows-10-tweaker
+.\tweaker.ps1
 ```
-
-## :sparkles: Installer :sparkles:
-
-This is a Script that I wrote to facilitate the installation in the three right-handed ones that I use most frequently (Debian, Fedora and ArchLinux).
-To use it, you just have to put this command line in the terminal.
-
-
-```bash
-cd ~/ && git clone https://github.com/yordisc/dotfiles && chmod 777 dotfiles/* -R && cd dotfiles/ && sudo bash dotfiles.sh
+### Modificador de Windows 10
+```PS
+cd
+git clone https://github.com/aikoncwd/win10script
+cd win10script
+.\aikoncwd-win10-script.vbs
 ```
-And follow the next steps:
-1) Enter the name of the user to whom you want to install the programs.
-2) The package you want to use according to the distribution is placed: Deb , Rpm , Aur.
-3) Select what you want to install (there are three menus so if you are not going to install anything from one press ENTER and go to the next menu).
-
-![dotfiles01](https://raw.githubusercontent.com/yordisc/dotfiles/master/dotfilesimages/dotfiles.sh01.png)
-![dotfiles02](https://raw.githubusercontent.com/yordisc/dotfiles/master/dotfilesimages/dotfiles.sh02.png)
-![dotfiles03](https://raw.githubusercontent.com/yordisc/dotfiles/master/dotfilesimages/dotfiles.sh03.png)
-![dotfiles04](https://raw.githubusercontent.com/yordisc/dotfiles/master/dotfilesimages/dotfiles.sh04.png)
-![dotfiles05](https://raw.githubusercontent.com/yordisc/dotfiles/master/dotfilesimages/dotfiles.sh05.png)
-![dotfiles06](https://raw.githubusercontent.com/yordisc/dotfiles/master/dotfilesimages/dotfiles.sh06.png)
-
-### :pushpin: Bspwm
-The Bspwm installer is inside dotfiles.sh, just select it.
-
-![bspwm01](https://raw.githubusercontent.com/yordisc/dotfiles/master/dotfilesimages/bspwm01.png)
-![bspwm02](https://raw.githubusercontent.com/yordisc/dotfiles/master/dotfilesimages/bspwm02.png)
-![bspwm03](https://raw.githubusercontent.com/yordisc/dotfiles/master/dotfilesimages/bspwm03.png)
-
-
-<kbd>Ctrl</kbd> + <kbd>Super</kbd> + <kbd>h</kbd> - It will show the keybindings menu <br>
-<kbd>Alt</kbd> + <kbd>Super</kbd> + <kbd>p</kbd> - Switch to polybar alternative <br>
-<kbd>Alt</kbd> + <kbd>Super</kbd> + <kbd>Tab</kbd> - Change skin <br>
-
-## :pencil2: Complete Nerdfons (Optional)
-```bash
-git clone https://github.com/ryanoasis/nerd-fonts
-unzip nerd-fonts-master.zip
-rm nerd-fonts-master.zip
-cd nerd-fonts
-sudo bash ./install.sh
+## Instalación de Programas
+Instalación de Winget-UI:
+```PS
+winget install wingetui
 ```
-## :computer: Automatically mount the disk at startup
-```bash
-sudo blkid
+Instala los programas usando Winget-GUI:
+* [WinGet GUI](https://github.com/Romanitho/Winget-Install-GUI
+)
+```PS
+cd
+git clone https://github.com/Romanitho/Winget-Install-GUI
+cd Winget-GUI/Sources
+.\Winget-Install-GUI.ps1
 ```
-```bash
-sudo mousepad /etc/fstab
+Y selecciona los programas desde:
+```PS
+cd dotfiles.exe/wingetinstallers
 ```
-## :dvd: Recommended distros
-* [Spiral Linux XFCE](https://spirallinux.github.io/#download)
-* [Fedora XFCE](https://spins.fedoraproject.org/xfce/download/index.html)
-* [Manjaro XFCE](https://manjaro.org/download/)
-
-## :loudspeaker: Pages of interest 
-* [Montar particion automaticamente en linux](https://vivaelsoftwarelibre.com/montar-particiones-al-iniciar-linux-automaticamente/)
-* [Servicios](https://www.hostinger.es/tutoriales/administrar-y-listar-servicios-en-linux)
-
+### Programas alternativos
+* [CPU-Z](https://www.cpuid.com/softwares/cpu-z.html)
+* [Format Factory](http://www.pcfreetime.com/formatfactory/index.php?language=es)
+* [Office](https://www.intercambiosvirtuales.org/software/office-professional-plus-2019-v1811-build-11029-20079-multilenguaje-espanol)
+* [PowerISO](https://www.intercambiosvirtuales.org/software/poweriso-v8-2-multilenguaje-espanol-cree-y-edite-archivos-iso-bin-cue-daa-y-mas)
+* [WinRAR](https://www.intercambiosvirtuales.org/software/winrar-v6-00-final-espanol-poderoso-compresor-en-ficheros-rar-zip)
+### Instaladores de programas Laborales (Azure, Cloud, etc)
+```PS
+cd
+git clone https://github.com/actions/runner-images/tree/main/images/win/scripts/Installers
+```
+### Instalar Oh my posh
+* [Oh my posh](https://ohmyposh.dev/docs)es parecido a "oh my zsh" pero con algunas limitantes.
+Ejecuta este script como administrador:
+```PS
+cd
+git clone https://github.com/yordisc/dotfiles.exe
+.\powershell.bat
+```
+Y por ultimo mueve la carpeta "PoweShell" a "Documents".
+## :loudspeaker: Reparar Windows 
+* [Reparar Imagen de Windows Offline](https://www.ubackup.com/es/windows-10/dism-offline-para-reparar-imagen.html)
+* [Reparar Imagen de Windows Online](https://www.compuhoy.com/como-usar-la-herramienta-de-comando-dism-para-reparar-la-imagen-de-windows-10/)
+* Si el problema es en el disco duro se recomienda el uso de [HDD Regenerator](https://www.mediafire.com/file/gamtcht4vwm1t2g/Herramientas+Reparacion+HDD.rar/file) y su Contraseña es: Tech
+* Si hay problema con controladores se recomienda [Driver Booster](https://www.tecnotutoshd.net/2020/07/driver-booster-pro-7.6.html) y se puede descargar [Aqui](https://mega.nz/file/HywiFIqa#E4Q4-fmg7eIUL7YfUwRBhdKpm-FmAn52qPE6tbMjC2M) en mega.
+ 
 ## :100: Resources used / Credits 
-* [Archcraft](https://github.com/archcraft-os)
-* [Arcolinux](https://github.com/arcolinuxd)
-* [Killer-OS](https://killer-os-oficial.github.io/wiki/wm/bspwm/)
-* [Polybar Themes](https://github.com/adi1090x/polybar-themes)
-* [NerdFonts](https://www.nerdfonts.com/cheat-sheet)
-* [Gruvbox-Material](https://github.com/TheGreatMcPain/gruvbox-material-gtk)
-* [Villanuevand](https://github.com/Villanuevand)
-* [Alejandro Fermín](https://github.com/lostalejandro/)
-
+* [Como agregar fuentes](https://support.microsoft.com/es-es/office/agregar-una-fuente-b7c5f17c-4426-4b53-967f-455339c564c1)
+* [Eliminar Windows Defender](https://www.alitajran.com/turn-off-windows-defender-in-windows-10-permanently/)
+* [Inicio de Sesión automatico](https://www.muycomputer.com/2019/03/11/iniciar-sesion-en-windows-10/)
+* [Instalación de Linux en Windows con WSL](https://learn.microsoft.com/es-es/windows/wsl/install)
 ## :venezuela: Social Media 
 * [Stackoverflow](https://stackoverflow.com/users/19875787/yordisc)
 * [Reddit](https://www.reddit.com/user/yordiscujar)
