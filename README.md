@@ -9,22 +9,21 @@
  
 <hr>
  
-#  :floppy_disk: Dotfiles.exe (Windows OS) :place_of_worship:
+#  :window: Dotfiles.exe (Windows OS) :place_of_worship:
 En este repositorio se encuentra mi configuración personal de Windows a la hora de instalarlo en un ordenador y algunos consejos, al que le pueda servir que sea bienvenido.
  
 ![Desktop](https://raw.githubusercontent.com/yordisc/dotfiles.exe/master/Desktop.png)
  
-## Instalación del sistema
+## Instalación del sistema :wrench:
 Recomiendo la instalación de un ISO windows completa (x64 ya que x86 no cumple con lo que se demanda en la actualidad y solo seria viable en un ordenador de muy bajos requerimientos y aun asi seria preferible un sistema basado en linux) y el uso de LTS solo en momentos muy particulares en donde se requiera de windows y se sepa exactamente lo que se va a hacer, aunque el redimiento de un Windows completo sea la mitad de bueno que el de un LTS, este al no contar con el sistema completo puede dar fallas.
 * [Descargar Windows](https://www.microsoft.com/es-es/software-download/windows10ISO)
 * [LTS Recomendado](https://phoenixliteos.com/ULTRALITE) Si es que se es requrido.
 * [Herramientas para hacer Windows Desatendido (LTS)](https://mega.nz/folder/uVBGRRxA#DYbopT3ICyUjswSXt1jA_A)
-* [Archivos de Importancia](https://mega.nz/folder/uMY20YQT#NXuvM7yBzPGCmHe9IbR4-w)
 ### :dvd: Instaladores de ISO al USB
 * [Rufus](https://rufus.ie/es/)
 * [BalenaEtcher](https://www.balena.io/etcher/)
 * [WoeUSB](https://github.com/WoeUSB/WoeUSB-ng) Para colocar el ISO en un USB en un Sistema Linux.
-### Reparar GRUB (si se llega a dar el caso)
+### Reparar GRUB (si se llega a dar el caso) :hammer_and_wrench:
 * [BootRepair](https://bootrepair.es/)
 si el problema es en Fedora usar estos comandos dentro de Fedora.
 ```bash
@@ -42,7 +41,7 @@ Para saber tu version puedes usar este comando.
 ```PS
 $psversiontable #version de powershell
 ```
-### Activación
+### :pushpin: Activación :closed_lock_with_key:
 * [Comprar Windows](https://www.microsoft.com/es-es/windows/get-windows-10)
  
  Activación por script (Modo Administrador):
@@ -52,17 +51,17 @@ git clone https://github.com/prestonsn/windows-10-activation-script
 cd \windows-10-activation-script\script
 .\actvatr.bat
 ```
-### Instalar PowerShell 7.3 desde linea de comandos (administrador)
+### :pushpin: Instalar PowerShell 7.3 desde linea de comandos (administrador)
 ```cmd
 msiexec.exe /package PowerShell-7.3.0-win-x64.msi /quiet ADD_EXPLORER_CONTEXT_MENU_OPENPOWERSHELL=1 ADD_FILE_CONTEXT_MENU_RUNPOWERSHELL=1 ENABLE_PSREMOTING=1 REGISTER_MANIFEST=1 USE_MU=1 ENABLE_MU=1 ADD_PATH=1
 ```
-### Scoop
+### :pushpin: Scoop
 ```PS
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
 scoop install neofetch
 ```
-### WinGet
+### :pushpin: WinGet
 * [Pagina de WinGet](https://github.com/microsoft/winget-cli)
 * [WinGet desde la Microsft Store](https://apps.microsoft.com/store/detail/app-installer/9NBLGGH4NNS1?hl=es-ad&gl=ad)
  
@@ -72,7 +71,7 @@ wget https://github.com/microsoft/winget-cli/releases/download/v1.3.2691/Microso
 Add-AppPackage -path “C:\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle”
 ```
 
-### Git
+### :pushpin: Git :octocat:
 * [Pagina de Git](https://git-scm.com/download/win)
 * [GitHub Desktop](https://desktop.github.com/)
  
@@ -80,7 +79,7 @@ Instalación usando Winget:
 ```PS
 winget install Git.Git
 ```
-### Instalar Gpedit
+### :pushpin: Instalar Gpedit
 Siempre sera necesario tener gpedit instalado:
 ```PS
 cd
@@ -88,12 +87,12 @@ git clone https://github.com/yordisc/dotfiles.exe
 cd dotfiles.exe
 .\gpedit-install.bat
 ```
-### Fuentes
+### :pushpin: Fuentes
 Para instalar en Windows 7 y Windows 10, vaya a Panel de control > Fuentes. En Windows 8.1, vaya a Panel de control > Apariencia y personalización > Fuentes.
 * [Nerd Fonts-Hack](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/Hack.zip)
 * [Nerd Fonts-Meslo](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip)
 
-## Limpiar Sistema
+## Limpiar Sistema :broom:
 ### Eliminar servicios y preinstalados (basicos)
 ```PS
 cd
@@ -135,11 +134,12 @@ cd dotfiles.exe/wingetinstallers
 ```
 ### Programas alternativos
 * [CPU-Z](https://www.cpuid.com/softwares/cpu-z.html)
+* [FileZilla](https://filezilla-project.org/)
 * [Format Factory](http://www.pcfreetime.com/formatfactory/index.php?language=es)
 * [Office](https://www.intercambiosvirtuales.org/software/office-professional-plus-2019-v1811-build-11029-20079-multilenguaje-espanol)
 * [PowerISO](https://www.intercambiosvirtuales.org/software/poweriso-v8-2-multilenguaje-espanol-cree-y-edite-archivos-iso-bin-cue-daa-y-mas)
 * [WinRAR](https://www.intercambiosvirtuales.org/software/winrar-v6-00-final-espanol-poderoso-compresor-en-ficheros-rar-zip)
-### Instaladores de programas Laborales (Azure, Cloud, etc)
+### Instaladores de programas Laborales (Azure, Cloud, etc) :briefcase:
 ```PS
 cd
 git clone https://github.com/actions/runner-images/tree/main/images/win/scripts/Installers
@@ -159,7 +159,8 @@ Y por ultimo mueve la carpeta "PoweShell" a "Documents".
 * Si el problema es en el disco duro se recomienda el uso de [HDD Regenerator](https://www.mediafire.com/file/gamtcht4vwm1t2g/Herramientas+Reparacion+HDD.rar/file) y su Contraseña es: Tech
 * Si hay problema con controladores se recomienda [Driver Booster](https://www.tecnotutoshd.net/2020/07/driver-booster-pro-7.6.html) y se puede descargar [Aqui](https://mega.nz/file/HywiFIqa#E4Q4-fmg7eIUL7YfUwRBhdKpm-FmAn52qPE6tbMjC2M) en mega.
   
-## :100: Resources used / Credits 
+## :100: Resources used / Credits
+* [Archivos de Importancia](https://mega.nz/folder/uMY20YQT#NXuvM7yBzPGCmHe9IbR4-w)
 * [Como agregar fuentes](https://support.microsoft.com/es-es/office/agregar-una-fuente-b7c5f17c-4426-4b53-967f-455339c564c1)
 * [Eliminar Windows Defender](https://www.alitajran.com/turn-off-windows-defender-in-windows-10-permanently/)
 * [Inicio de Sesión automatico](https://www.muycomputer.com/2019/03/11/iniciar-sesion-en-windows-10/)
