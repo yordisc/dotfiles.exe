@@ -12,7 +12,7 @@
 #  :floppy_disk: Dotfiles.exe (Windows OS) :place_of_worship:
 En este repositorio se encuentra mi configuración personal de Windows a la hora de instalarlo en un ordenador y algunos consejos, al que le pueda servir que sea bienvenido.
  
- ![dotfiles01](https://raw.githubusercontent.com/yordisc/dotfiles/master/dotfilesimages/dotfiles.sh01.png)
+ ![Desktop](https://raw.githubusercontent.com/yordisc/dotfiles.exe/master/Desktop.sh01.png)
  
 ## Instalación del sistema
 Recomiendo la instalación de un ISO windows completa (x64 ya que x86 no cumple con lo que se demanda en la actualidad y solo seria viable en un ordenador de muy bajos requerimientos y aun asi seria preferible un sistema basado en linux) y el uso de LTS solo en momentos muy particulares en donde se requiera de windows y se sepa exactamente lo que se va a hacer, aunque el redimiento de un Windows completo sea la mitad de bueno que el de un LTS, este al no contar con el sistema completo puede dar fallas.
@@ -26,7 +26,7 @@ Recomiendo la instalación de un ISO windows completa (x64 ya que x86 no cumple 
 * [WoeUSB](https://github.com/WoeUSB/WoeUSB-ng) Para colocar el ISO en un USB en un Sistema Linux.
 ### Reparar GRUB (si se llega a dar el caso)
 * [BootRepair](https://bootrepair.es/)
-Si el problema es en Fedora usar estos comandos dentro de Fedora.
+si el problema es en Fedora usar estos comandos dentro de Fedora.
 ```bash
 sudo grub2-mkconfig -o /etc/grub2.cfg
 sudo grub2-mkconfig -o /etc/grub2-efi.cfg
@@ -44,7 +44,8 @@ $psversiontable #version de powershell
 ```
 ### Activación
 * [Comprar Windows](https://www.microsoft.com/es-es/windows/get-windows-10)
-Activación por script (Modo Administrador):
+ 
+ Activación por script (Modo Administrador):
 ```PS
 cd
 git clone https://github.com/prestonsn/windows-10-activation-script
@@ -65,7 +66,7 @@ scoop install neofetch
 * [Pagina de WinGet](https://github.com/microsoft/winget-cli)
 * [WinGet desde la Microsft Store](https://apps.microsoft.com/store/detail/app-installer/9NBLGGH4NNS1?hl=es-ad&gl=ad)
  
-Comando de instalación desde PowerShell:
+ Comando de instalación desde PowerShell:
 ```PS
 wget https://github.com/microsoft/winget-cli/releases/download/v1.3.2691/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle -OutFile C:\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
 Add-AppPackage -path “C:\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle”
@@ -74,6 +75,7 @@ Add-AppPackage -path “C:\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundl
 ### Git
 * [Pagina de Git](https://git-scm.com/download/win)
 * [GitHub Desktop](https://desktop.github.com/)
+ 
 Instalación usando Winget:
 ```PS
 winget install Git.Git
@@ -143,7 +145,7 @@ cd
 git clone https://github.com/actions/runner-images/tree/main/images/win/scripts/Installers
 ```
 ### Instalar Oh my posh
-* [Oh my posh](https://ohmyposh.dev/docs)es parecido a "oh my zsh" pero con algunas limitantes.
+* [Oh my posh](https://ohmyposh.dev/docs) es parecido a "oh my zsh" pero con algunas limitantes.
 Ejecuta este script como administrador:
 ```PS
 cd
@@ -156,7 +158,7 @@ Y por ultimo mueve la carpeta "PoweShell" a "Documents".
 * [Reparar Imagen de Windows Online](https://www.compuhoy.com/como-usar-la-herramienta-de-comando-dism-para-reparar-la-imagen-de-windows-10/)
 * Si el problema es en el disco duro se recomienda el uso de [HDD Regenerator](https://www.mediafire.com/file/gamtcht4vwm1t2g/Herramientas+Reparacion+HDD.rar/file) y su Contraseña es: Tech
 * Si hay problema con controladores se recomienda [Driver Booster](https://www.tecnotutoshd.net/2020/07/driver-booster-pro-7.6.html) y se puede descargar [Aqui](https://mega.nz/file/HywiFIqa#E4Q4-fmg7eIUL7YfUwRBhdKpm-FmAn52qPE6tbMjC2M) en mega.
- 
+  
 ## :100: Resources used / Credits 
 * [Como agregar fuentes](https://support.microsoft.com/es-es/office/agregar-una-fuente-b7c5f17c-4426-4b53-967f-455339c564c1)
 * [Eliminar Windows Defender](https://www.alitajran.com/turn-off-windows-defender-in-windows-10-permanently/)
