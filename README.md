@@ -14,7 +14,7 @@ En este repositorio se encuentra mi configuración personal de Windows a la hora
  
 ![Desktop](https://raw.githubusercontent.com/yordisc/dotfiles.exe/master/Desktop.png)
  
-## Instalación del sistema :wrench:
+## :wrench: Instalación del sistema 
 Recomiendo la instalación de un ISO windows completa (x64 ya que x86 no cumple con lo que se demanda en la actualidad y solo seria viable en un ordenador de muy bajos requerimientos y aun asi seria preferible un sistema basado en linux) y el uso de LTS solo en momentos muy particulares en donde se requiera de windows y se sepa exactamente lo que se va a hacer, aunque el redimiento de un Windows completo sea la mitad de bueno que el de un LTS, este al no contar con el sistema completo puede dar fallas.
 * [Descargar Windows](https://www.microsoft.com/es-es/software-download/windows10ISO)
 * [LTS Recomendado](https://phoenixliteos.com/ULTRALITE) Si es que se es requrido.
