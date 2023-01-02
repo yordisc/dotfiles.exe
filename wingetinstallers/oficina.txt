@@ -1,0 +1,5 @@
+TheDocumentFoundation.LibreOffice
+LibreCAD.LibreCAD
+Notion.Notion
+Espanso.Espanso
+Microsoft.PowerBI

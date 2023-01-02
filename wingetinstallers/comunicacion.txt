@@ -1,0 +1,6 @@
+Microsoft.Skype
+SlackTechnologies.Slack
+Discord.Discord
+Microsoft.Teams
+Telegram.TelegramDesktop
+Zoom.Zoom

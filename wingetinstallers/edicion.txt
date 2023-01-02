@@ -1,0 +1,8 @@
+Inkscape.Inkscape
+GIMP.GIMP
+KDE.Krita
+KDE.KritaShellExtension
+Audacity.Audacity
+OBSProject.OBSStudio
+XnSoft.XnView.Classic
+KDE.Kdenlive

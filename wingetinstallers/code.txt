@@ -1,0 +1,4 @@
+Microsoft.VisualStudioCode
+JetBrains.IntelliJIDEA.Community
+Geany.Geany
+Notepad++.Notepad++

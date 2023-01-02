@@ -1,0 +1,11 @@
+Microsoft.DirectX
+Microsoft.XNARedist
+Microsft.PowerToys
+Microsoft.WindowsSDK
+Microsoft.WindowsTerminal
+Microsoft.PowerShell
+Terminals.Terminals
+Cygwin.Cygwin
+JanDeDobbeleer.OhMyPosh
+
+ 
