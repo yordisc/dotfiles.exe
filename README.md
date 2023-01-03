@@ -14,15 +14,15 @@ In this repository you will find my personal Windows configuration when installi
  
 ![Desktop](https://raw.githubusercontent.com/yordisc/dotfiles.exe/master/Desktop.png)
  
-## :wrench: Instalación del sistema 
+## :wrench: System installation
 I recommend the installation of a complete windows ISO (x64 since x86 does not meet what is currently demanded and would only be viable on a computer with very low requirements and even so a linux-based system would be preferable) and the use of LTS only in very particular moments where windows is required and it is known exactly what is going to be done, although the performance of a complete Windows is half as good as that of an LTS, since it does not have the complete system it can give failures.
 * [Download Windows](https://www.microsoft.com/es-es/software-download/windows10ISO)
 * [LTS](https://phoenixliteos.com/ULTRALITE) Si es que se es requrido.
 * [Tools to Make Windows Unattended (LTS)](https://mega.nz/folder/uVBGRRxA#DYbopT3ICyUjswSXt1jA_A)
-### :dvd: Instaladores de ISO al USB
+### :dvd: ISO to USB Installers
 * [Rufus](https://rufus.ie/es/)
 * [BalenaEtcher](https://www.balena.io/etcher/)
-* [WoeUSB](https://github.com/WoeUSB/WoeUSB-ng) Para colocar el ISO en un USB en un Sistema Linux.
+* [WoeUSB](https://github.com/WoeUSB/WoeUSB-ng) To put the ISO on a USB on a Linux System.
 ### Repair GRUB (if applicable) :hammer_and_wrench:
 * [BootRepair](https://bootrepair.es/)
 if the problem is in Fedora use these commands inside Fedora.
@@ -41,7 +41,7 @@ To know your version you can use this command.
 ```PS
 $psversiontable #version de powershell
 ```
-### :pushpin: Activación :closed_lock_with_key:
+### :pushpin: Activation :closed_lock_with_key:
 * [Buy Windows]Comprar Windows](https://www.microsoft.com/es-es/windows/get-windows-10)
  
 Activation by script (Administrator Mode):
