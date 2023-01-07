@@ -79,7 +79,7 @@ Installation using Winget:
 ```PS
 winget install Git.Git
 ```
-### :pushpin: Instalar Gpedit
+### :pushpin: Install Gpedit
 It will always be necessary to have gpedit installed:
 ```PS
 cd
@@ -87,7 +87,7 @@ git clone https://github.com/yordisc/dotfiles.exe
 cd dotfiles.exe
 .\gpedit-install.bat
 ```
-### :pushpin: Fuentes
+### :pushpin: Fonts
 To install on Windows 7 and Windows 10, go to Control Panel > Fonts. In Windows 8.1, go to Control Panel > Appearance and Personalization > Fonts.
 * [Nerd Fonts-Hack](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/Hack.zip)
 * [Nerd Fonts-Meslo](https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip)
