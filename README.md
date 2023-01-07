@@ -17,12 +17,12 @@ In this repository you will find my personal Windows configuration when installi
 ## :wrench: System installation
 I recommend the installation of a complete windows ISO (x64 since x86 does not meet what is currently demanded and would only be viable on a computer with very low requirements and even so a linux-based system would be preferable) and the use of LTS only in very particular moments where windows is required and it is known exactly what is going to be done, although the performance of a complete Windows is half as good as that of an LTS, since it does not have the complete system it can give failures.
 * [Download Windows](https://www.microsoft.com/es-es/software-download/windows10ISO)
-* [LTS](https://phoenixliteos.com/ULTRALITE) Si es que se es requrido.
+* [LTS](https://phoenixliteos.com/ULTRALITE) if it is required.
 * [Tools to Make Windows Unattended (LTS)](https://mega.nz/folder/uVBGRRxA#DYbopT3ICyUjswSXt1jA_A)
 ### :dvd: ISO to USB Installers
 * [Rufus](https://rufus.ie/es/)
 * [BalenaEtcher](https://www.balena.io/etcher/)
-* [WoeUSB](https://github.com/WoeUSB/WoeUSB-ng) To put the ISO on a USB on a Linux System.
+* [WoeUSB](https://github.com/WoeUSB/WoeUSB-ng) to put the ISO on a USB on a Linux System.
 ### Repair GRUB (if applicable) :hammer_and_wrench:
 * [BootRepair](https://bootrepair.es/)
 if the problem is in Fedora use these commands inside Fedora.
@@ -42,7 +42,7 @@ To know your version you can use this command.
 $psversiontable #version de powershell
 ```
 ### :pushpin: Activation :closed_lock_with_key:
-* [Buy Windows]Comprar Windows](https://www.microsoft.com/es-es/windows/get-windows-10)
+* [Buy Windows](https://www.microsoft.com/es-es/windows/get-windows-10)
  
 Activation by script (Administrator Mode):
 ```PS
@@ -145,7 +145,7 @@ cd
 git clone https://github.com/actions/runner-images/tree/main/images/win/scripts/Installers
 ```
 ### Install Oh my posh
-* [Oh my posh](https://ohmyposh.dev/docs) It's similar to "oh my zsh" but with some limitations.
+* [Oh my posh](https://ohmyposh.dev/docs) it's similar to "oh my zsh" but with some limitations.
 Run this script as administrator:
 ```PS
 cd
@@ -157,7 +157,7 @@ And finally move the "PowerShell" folder to "Documents".
 * [Repair Windows Image Offline](https://www.ubackup.com/es/windows-10/dism-offline-para-reparar-imagen.html)
 * [Repair Windows Online Image](https://www.compuhoy.com/como-usar-la-herramienta-de-comando-dism-para-reparar-la-imagen-de-windows-10/)
 * If the problem is in the hard drive, it is recommended to use [HDD Regenerator](https://www.mediafire.com/file/gamtcht4vwm1t2g/Herramientas+Reparacion+HDD.rar/file) and your password is: Tech
-* If there is a problem with drivers, [Driver Booster](https://www.tecnotutoshd.net/2020/07/driver-booster-pro-7.6.html)is recommended. and you can download [Here](https://mega.nz/file/HywiFIqa#E4Q4-fmg7eIUL7YfUwRBhdKpm-FmAn52qPE6tbMjC2M) in mega.
+* If there is a problem with drivers, [Driver Booster](https://www.tecnotutoshd.net/2020/07/driver-booster-pro-7.6.html) is recommended. and you can download [Here](https://mega.nz/file/HywiFIqa#E4Q4-fmg7eIUL7YfUwRBhdKpm-FmAn52qPE6tbMjC2M) in mega.
   
 ## :100: Resources used / Credits
 * [Files of Importance](https://mega.nz/folder/uMY20YQT#NXuvM7yBzPGCmHe9IbR4-w)
