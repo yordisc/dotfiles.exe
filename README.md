@@ -17,7 +17,7 @@ In this repository you will find my personal Windows configuration when installi
 ## :wrench: System installation
 I recommend the installation of a complete windows ISO (x64 since x86 does not meet what is currently demanded and would only be viable on a computer with very low requirements and even so a linux-based system would be preferable) and the use of LTS only in very particular moments where windows is required and it is known exactly what is going to be done, although the performance of a complete Windows is half as good as that of an LTS, since it does not have the complete system it can give failures.
 * [Download Windows](https://www.microsoft.com/es-es/software-download/windows10ISO)
-* [LTS](www.dprojects.org) if it is required.
+* [LTS](https://www.dprojects.org) if it is required.
 * [Tools to Make Windows Unattended (LTS)](https://mega.nz/folder/uVBGRRxA#DYbopT3ICyUjswSXt1jA_A)
 ### :dvd: ISO to USB Installers
 * [Rufus](https://rufus.ie/es/)
@@ -45,9 +45,9 @@ $psversiontable #version de powershell
 * [Buy Windows](https://www.microsoft.com/es-es/windows/get-windows-10)
 USAR ESTOS COMANDOS POR CMD COMO ADMINISTRADOR:
 ```PS
-slmgr /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43     y pulsa Enter
-slmgr /skms kms.digiboy.ir   y pulsa Enter
-slmgr /ato            (para eliminar marca de agua) y pulsa Enter
+slmgr /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43
+slmgr /skms kms.digiboy.ir
+slmgr /ato
 ```
 
 Activation by script (Administrator Mode):
