@@ -17,7 +17,7 @@ In this repository you will find my personal Windows configuration when installi
 ## :wrench: System installation
 I recommend the installation of a complete windows ISO (x64 since x86 does not meet what is currently demanded and would only be viable on a computer with very low requirements and even so a linux-based system would be preferable) and the use of LTS only in very particular moments where windows is required and it is known exactly what is going to be done, although the performance of a complete Windows is half as good as that of an LTS, since it does not have the complete system it can give failures.
 * [Download Windows](https://www.microsoft.com/es-es/software-download/windows10ISO)
-* [LTS](https://phoenixliteos.com/ULTRALITE) if it is required.
+* [LTS](www.dprojects.org) if it is required.
 * [Tools to Make Windows Unattended (LTS)](https://mega.nz/folder/uVBGRRxA#DYbopT3ICyUjswSXt1jA_A)
 ### :dvd: ISO to USB Installers
 * [Rufus](https://rufus.ie/es/)
@@ -43,7 +43,13 @@ $psversiontable #version de powershell
 ```
 ### :pushpin: Activation :closed_lock_with_key:
 * [Buy Windows](https://www.microsoft.com/es-es/windows/get-windows-10)
- 
+USAR ESTOS COMANDOS POR CMD COMO ADMINISTRADOR:
+```PS
+slmgr /ipk NPPR9-FWDCX-D2C8J-H872K-2YT43     y pulsa Enter
+slmgr /skms kms.digiboy.ir   y pulsa Enter
+slmgr /ato            (para eliminar marca de agua) y pulsa Enter
+```
+
 Activation by script (Administrator Mode):
 ```PS
 cd
@@ -162,7 +168,8 @@ And finally move the "PowerShell" folder to "Documents".
 ## :100: Resources used / Credits
 * [Files of Importance](https://mega.nz/folder/uMY20YQT#NXuvM7yBzPGCmHe9IbR4-w)
 * [How to add sources](https://support.microsoft.com/es-es/office/agregar-una-fuente-b7c5f17c-4426-4b53-967f-455339c564c1)
-* [Remove Windows Defender](https://www.alitajran.com/turn-off-windows-defender-in-windows-10-permanently/)
+* [Remove Windows Defender 1](https://www.youtube.com/watch?v=e50wfYVOPa8&t=90s)
+* [Remove Windows Defender 2](https://www.youtube.com/watch?v=eeu59Cd-AcI&t=167ss)
 * [Automatic login](https://www.muycomputer.com/2019/03/11/iniciar-sesion-en-windows-10/)
 * [Installing Linux on Windows with WSL](https://learn.microsoft.com/es-es/windows/wsl/install)
 ## :venezuela: Social Media 
